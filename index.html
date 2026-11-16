@@ -104,6 +104,19 @@ main {
   width: 100%;
 }
 
+/* Welcome section with photograph */
+
+.welcome-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: start;
+  gap: 35px;
+}
+
+.welcome-content {
+  min-width: 0;
+}
+
 h2 {
   font-size: 1.65rem;
   letter-spacing: -.025em;
@@ -121,6 +134,23 @@ h2 {
 
 .intro p:last-child {
   margin-bottom: 0;
+}
+
+/* Profile photograph */
+
+.profile-photo {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 10px;
+  display: block;
+}
+
+.photo-container {
+  width: 100%;
+  max-width: 220px;
+  margin: 5px 0 0;
 }
 
 /* About link */
@@ -190,6 +220,23 @@ h2 {
   }
 }
 
+/* Tablet layout */
+
+@media (max-width: 850px) and (min-width: 701px) {
+  .welcome-layout {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 24px;
+  }
+
+  .photo-container {
+    max-width: 180px;
+  }
+
+  .profile-photo {
+    height: 235px;
+  }
+}
+
 /* Mobile layout */
 
 @media (max-width: 700px) {
@@ -216,12 +263,26 @@ h2 {
     padding: 24px 0 30px;
   }
 
+  .welcome-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
   h2 {
     font-size: 1.5rem;
   }
 
   .intro {
     font-size: .96rem;
+  }
+
+  .photo-container {
+    max-width: 190px;
+    margin: 0;
+  }
+
+  .profile-photo {
+    height: 245px;
   }
 
   .foot {
@@ -259,39 +320,61 @@ h2 {
   <section class="home-intro" id="about">
     <div class="wrap">
 
-      <h2>Welcome</h2>
+      <div class="welcome-layout">
 
-      <div class="intro">
+        <!-- WELCOME TEXT -->
 
-        <p>
-          I am a Health Data Scientist with dual Master’s
-          degrees in Bioinformatics and Biomedical Informatics.
-        </p>
+        <div class="welcome-content">
 
-        <p>
-          My research focuses on the epidemiology of diabetes
-          and multiple long-term conditions. Using large-scale
-          population and healthcare datasets, I apply
-          epidemiological methods, biostatistics and machine
-          learning to understand how chronic diseases coexist,
-          how their patterns differ across populations, and
-          how they shape health outcomes.
-        </p>
+          <h2>Welcome</h2>
 
-        <p>
-          My broader interest is in using health data to
-          inform disease prevention, clinical decision-making
-          and population health policy.
-        </p>
+          <div class="intro">
+
+            <p>
+              I am a Health Data Scientist with dual Master’s
+              degrees in Bioinformatics and Biomedical Informatics.
+            </p>
+
+            <p>
+              My research focuses on the epidemiology of diabetes
+              and multiple long-term conditions. Using large-scale
+              population and healthcare datasets, I apply
+              epidemiological methods, biostatistics and machine
+              learning to understand how chronic diseases coexist,
+              how their patterns differ across populations, and
+              how they shape health outcomes.
+            </p>
+
+            <p>
+              My broader interest is in using health data to
+              inform disease prevention, clinical decision-making
+              and population health policy.
+            </p>
+
+          </div>
+
+          <!-- MORE INFORMATION LINK -->
+
+          <p class="explore-link">
+            Learn more about me or get in touch
+            <a href="about.html">here</a>.
+          </p>
+
+        </div>
+
+        <!-- PROFILE PHOTOGRAPH -->
+
+        <figure class="photo-container">
+          <img
+            src="profile.jpg"
+            alt="Portrait of Karamo Bah"
+            class="profile-photo"
+            width="220"
+            height="285"
+          >
+        </figure>
 
       </div>
-
-      <!-- MORE INFORMATION LINK -->
-
-      <p class="explore-link">
-        Learn more about me or get in touch
-        <a href="about.html">here</a>.
-      </p>
 
     </div>
   </section>
