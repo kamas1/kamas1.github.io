@@ -50,7 +50,7 @@ a {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -60,10 +60,6 @@ a {
 .nav a {
   text-decoration: none;
   color: inherit;
-}
-
-.nav strong {
-  font-size: 1.1rem;
 }
 
 .links {
@@ -216,11 +212,9 @@ h2 {
 
 @media (max-width: 700px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: flex-start;
     padding-top: 12px;
     padding-bottom: 12px;
-    gap: 8px;
   }
 
   .links {
@@ -259,10 +253,6 @@ h2 {
 <body>
 
 <header class="wrap nav">
-  <a href="index.html">
-    <strong>Karamo Bah</strong>
-  </a>
-
   <nav class="links" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
