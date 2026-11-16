@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--ink);
   line-height: 1.55;
   background: #fff;
@@ -78,28 +78,14 @@ a {
 .hero {
   background: linear-gradient(115deg, #581a2e, #8a2d47);
   color: white;
-  padding: 28px 0 32px;
+  padding: 28px 0 30px;
 }
 
 .hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: -.04em;
   line-height: 1.1;
-  margin: 0 0 14px;
-}
-
-.pill {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid #e5b1bf;
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
-  font-size: .92rem;
-}
-
-.pill:hover {
-  background: #ffffff1c;
+  margin: 0;
 }
 
 /* Main content */
@@ -111,10 +97,7 @@ main {
 }
 
 .home-intro {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  padding: 24px 0;
+  padding: 30px 0 38px;
 }
 
 .home-intro .wrap {
@@ -140,10 +123,10 @@ h2 {
   margin-bottom: 0;
 }
 
-/* Research link */
+/* About link */
 
 .explore-link {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: .98rem;
 }
 
@@ -179,11 +162,10 @@ h2 {
 
   .hero h1 {
     font-size: 3.2rem;
-    margin-bottom: 10px;
   }
 
   .home-intro {
-    padding: 16px 0;
+    padding: 24px 0 30px;
   }
 
   h2 {
@@ -200,7 +182,7 @@ h2 {
   }
 
   .explore-link {
-    margin-top: 12px;
+    margin-top: 18px;
   }
 
   .foot {
@@ -231,8 +213,7 @@ h2 {
   }
 
   .home-intro {
-    padding: 24px 0;
-    align-items: flex-start;
+    padding: 24px 0 30px;
   }
 
   h2 {
@@ -265,15 +246,15 @@ h2 {
 
 <main id="top">
 
+  <!-- NAME HEADER -->
+
   <div class="hero">
     <div class="wrap">
       <h1>Karamo Bah</h1>
-
-      <a class="pill" href="about.html">
-        Explore my research →
-      </a>
     </div>
   </div>
+
+  <!-- WELCOME SECTION -->
 
   <section class="home-intro" id="about">
     <div class="wrap">
@@ -305,11 +286,11 @@ h2 {
 
       </div>
 
+      <!-- MORE INFORMATION LINK -->
+
       <p class="explore-link">
-        <a href="about.html">
-          Explore my research interests, projects,
-          publications and professional profiles →
-        </a>
+        Learn more about me or get in touch
+        <a href="about.html">here</a>.
       </p>
 
     </div>
